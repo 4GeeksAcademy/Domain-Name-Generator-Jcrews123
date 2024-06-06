@@ -1,11 +1,21 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+const pronoun = ["the", "our"];
+const adj = ["great", "big"];
+const noun = ["jogger", "racoon"];
+const extensions = [".com", ".net", ".us", ".io"];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+const domain = [];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+for (let index = 0; index < pronoun.length; index++) {
+  for (let secondIndex = 0; secondIndex < adj.length; secondIndex++) {
+    for (let thirdIndex = 0; thirdIndex < noun.length; thirdIndex++) {
+      for(let fourthIndex = 0; fourthIndex < extensions.length; fourthIndex++)
+      domain.push(`${pronoun[index]}${adj[secondIndex]}${noun[thirdIndex]}${extensions[fourthIndex]}`);
+    }
+  }
+}
+console.log(domain);
+
+
+// for (const domain of domains) {
+//   console.log(domain + ".com");
+// }
