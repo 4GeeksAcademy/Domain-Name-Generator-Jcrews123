@@ -5,16 +5,17 @@ const extensions = [".com", ".net", ".us", ".io"];
 
 const domain = [];
 
-for (let index = 0; index < pronoun.length; index++) {
-  for (let secondIndex = 0; secondIndex < adj.length; secondIndex++) {
-    for (let thirdIndex = 0; thirdIndex < noun.length; thirdIndex++) {
-      for(let fourthIndex = 0; fourthIndex < extensions.length; fourthIndex++)
-      domain.push(`${pronoun[index]}${adj[secondIndex]}${noun[thirdIndex]}${extensions[fourthIndex]}`);
+for (let pronounIndex = 0; pronounIndex < pronoun.length; pronounIndex++) {
+  for (let adjIndex = 0; adjIndex < adj.length; adjIndex++) {
+    for (let nounIndex = 0; nounIndex < noun.length; nounIndex++) {
+      for (let extensionsIndex = 0; extensionsIndex < extensions.length; extensionsIndex++)
+        domain.push(
+          `${pronoun[pronounIndex]}${adj[adjIndex]}${noun[nounIndex]}${extensions[extensionsIndex]}`
+        );
     }
   }
 }
 console.log(domain);
-
 
 // for (const domain of domains) {
 //   console.log(domain + ".com");
